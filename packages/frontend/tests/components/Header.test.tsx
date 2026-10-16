@@ -504,14 +504,3 @@ describe('Header - connection breadcrumb', () => {
     expect(container.querySelector('a[href="/providers/usage-based"]')).toBeNull();
   });
 });
-
-describe('Header services button', () => {
-  it('opens the custom development modal', async () => {
-    const { default: Header } = await import('../../src/components/Header');
-    const { render: r, fireEvent: f } = await import('@solidjs/testing-library');
-    const { getByText, container } = r(() => <Header />);
-    expect(container.querySelector('.services-modal')).toBeNull();
-    f.click(getByText('Custom development'));
-    expect(container.querySelector('.services-modal')).not.toBeNull();
-  });
-});

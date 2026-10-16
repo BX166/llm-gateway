@@ -519,8 +519,7 @@
 }
 
 /* ── Docs Link ───────────────────────────────────── */
-.header__docs-link,
-.header__services-btn {
+.header__docs-link {
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -540,8 +539,7 @@
   line-height: 1;
 }
 
-.header__docs-link:hover,
-.header__services-btn:hover {
+.header__docs-link:hover {
   border-color: hsl(var(--ring) / 0.3);
   background: hsl(var(--muted));
 }

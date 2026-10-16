@@ -24,7 +24,6 @@ import {
 } from '../services/connection-breadcrumb-store.js';
 import { providerIcon } from './ProviderIcon.jsx';
 import DuplicateAgentModal from './DuplicateAgentModal.jsx';
-import ServicesContactModal from './ServicesContactModal.jsx';
 
 const GITHUB_REPO = 'mnfst/llm-gateway';
 const STAR_DISMISSED_KEY = 'github-star-dismissed';
@@ -45,7 +44,6 @@ const Header: Component<HeaderProps> = (props) => {
   const [menuOpen, setMenuOpen] = createSignal(false);
   const [gearOpen, setGearOpen] = createSignal(false);
   const [duplicateOpen, setDuplicateOpen] = createSignal(false);
-  const [servicesOpen, setServicesOpen] = createSignal(false);
   const [starCount, setStarCount] = createSignal<number | null>(null);
   const [starDismissed, setStarDismissed] = createSignal(
     sessionStorage.getItem(STAR_DISMISSED_KEY) === 'true',
@@ -283,9 +281,6 @@ const Header: Component<HeaderProps> = (props) => {
             <span aria-hidden="true" />
           </button>
         </Show>
-        <button type="button" class="header__services-btn" onClick={() => setServicesOpen(true)}>
-          Custom development
-        </button>
         <a href={docsUrl()} target="_blank" rel="noopener noreferrer" class="header__docs-link">
           <svg
             width="13"
@@ -422,12 +417,6 @@ const Header: Component<HeaderProps> = (props) => {
           </Show>
         </div>
       </div>
-      <ServicesContactModal
-        open={servicesOpen()}
-        defaultName={user()?.name ?? ''}
-        defaultEmail={user()?.email ?? ''}
-        onClose={() => setServicesOpen(false)}
-      />
       <DuplicateAgentModal
         open={duplicateOpen()}
         sourceName={getAgentName() ?? ''}

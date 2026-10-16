@@ -1288,7 +1288,6 @@ h6 {
   .header__separator,
   .header__breadcrumb-link,
   .header__docs-link,
-  .header__services-btn,
   .header__github-star,
   .header__star-separator {
     display: none;

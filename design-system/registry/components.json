@@ -1524,7 +1524,6 @@
         "header__pro-badge",
         "header__right",
         "header__separator",
-        "header__services-btn",
         "header__star-separator"
       ],
       "files": [
@@ -3630,6 +3629,14 @@
         "theme.css"
       ]
     },
+    "sidebar-services": {
+      "classes": [
+        "sidebar-services"
+      ],
+      "files": [
+        "modals.css"
+      ]
+    },
     "sidebar-upgrade": {
       "classes": [
         "sidebar-upgrade"
@@ -5087,7 +5094,7 @@
   "stats": {
     "tokens": 79,
     "darkOverrides": 38,
-    "blocks": 314,
+    "blocks": 315,
     "classes": 1697,
     "canonicalRules": 46,
     "ghostRules": 46
