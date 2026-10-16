@@ -3379,6 +3379,19 @@
         "theme.css"
       ]
     },
+    "services-modal": {
+      "classes": [
+        "services-modal",
+        "services-modal__contact",
+        "services-modal__list",
+        "services-modal__offer",
+        "services-modal__sent",
+        "services-modal__textarea"
+      ],
+      "files": [
+        "modals.css"
+      ]
+    },
     "settings-card": {
       "classes": [
         "settings-card",
@@ -3614,6 +3627,14 @@
       "files": [
         "controls.css",
         "theme.css"
+      ]
+    },
+    "sidebar-services": {
+      "classes": [
+        "sidebar-services"
+      ],
+      "files": [
+        "modals.css"
       ]
     },
     "sidebar-upgrade": {
@@ -5073,8 +5094,8 @@
   "stats": {
     "tokens": 79,
     "darkOverrides": 38,
-    "blocks": 313,
-    "classes": 1690,
+    "blocks": 315,
+    "classes": 1697,
     "canonicalRules": 46,
     "ghostRules": 46
   }
