@@ -892,3 +892,7 @@
 .sidebar-services:hover {
   opacity: 0.85;
 }
+
+.services-modal .btn--primary {
+  gap: 6px;
+}
