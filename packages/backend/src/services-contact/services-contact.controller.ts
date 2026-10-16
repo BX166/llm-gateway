@@ -6,7 +6,7 @@ import { ServicesContactDto } from './dto/services-contact.dto';
  * Endpoint of the manifest.build Vercel function (mnfst/website api/contact.js)
  * that emails each services request to the Manifest team. Nothing is stored.
  */
-export const SERVICES_CONTACT_URL = 'https://manifest.build/api/contact';
+export const SERVICES_CONTACT_URL = 'https://manifest.build/api/contact/';
 
 /**
  * Relays the dashboard's "Custom development" form to manifest.build. The
