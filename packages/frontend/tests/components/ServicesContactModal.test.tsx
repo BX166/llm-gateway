@@ -70,7 +70,7 @@ describe('ServicesContactModal', () => {
       company: 'Acme',
       message: 'We need custom guardrails.',
     });
-    expect((await findByRole('status')).textContent).toContain('Sébastien');
+    expect((await findByRole('status')).textContent).toContain('The Manifest team will reply by email.');
   });
 
   it('shows the email address when sending fails', async () => {

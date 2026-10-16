@@ -105,7 +105,7 @@ export default function ServicesContactModal(props: ServicesContactModalProps): 
               when={!sent()}
               fallback={
                 <p class="services-modal__sent" role="status">
-                  Thanks for your message. Sébastien from the Manifest team will reply by email.
+                  Thanks for your message. The Manifest team will reply by email.
                 </p>
               }
             >
