@@ -94,14 +94,12 @@ export default function ServicesContactModal(props: ServicesContactModalProps): 
               Custom development for your LLM gateway
             </h2>
             <p class="modal-card__desc">
-              Our team develops what your company needs around Manifest LLM Gateway.
+              Our team develops what your project needs around Manifest LLM Gateway. Here are a few
+              examples:
             </p>
             <ul class="services-modal__list">
               <For each={[...SERVICES_OFFER]}>{(item) => <li>{item}</li>}</For>
             </ul>
-            <p class="services-modal__more">
-              We also develop anything else your project needs. Tell us about it.
-            </p>
           </div>
           <div class="services-modal__contact">
             <Show
