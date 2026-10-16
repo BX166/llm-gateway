@@ -39,9 +39,7 @@ describe('ServicesContactModal', () => {
     expect(container.querySelectorAll('.services-modal__list li').length).toBe(
       SERVICES_OFFER.length,
     );
-    expect(container.querySelector('.modal-card__desc')!.textContent).toContain(
-      'Here are a few examples',
-    );
+    expect(container.querySelector('.modal-card__desc')!.textContent).toContain('For example:');
     expect((container.querySelector('#services-name') as HTMLInputElement).value).toBe(
       'Ada Lovelace',
     );
