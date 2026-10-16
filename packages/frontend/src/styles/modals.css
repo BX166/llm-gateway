@@ -833,10 +833,48 @@
   color: hsl(var(--muted-foreground));
 }
 
+/* Contact side in inverted colors: dark in light mode, light in dark mode,
+   like the form block of manifest.build/services/. */
 .services-modal__contact {
   padding: 32px;
   max-height: 85vh;
   overflow-y: auto;
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+.services-modal__contact .modal-card__field-label,
+.services-modal__contact .services-modal__sent {
+  color: hsl(var(--background));
+}
+
+.services-modal__contact .modal-card__input {
+  background: hsl(var(--background) / 0.08);
+  border-color: hsl(var(--background) / 0.2);
+  color: hsl(var(--background));
+}
+
+.services-modal__contact .modal-card__input::placeholder {
+  color: hsl(var(--background) / 0.45);
+}
+
+.services-modal__contact .modal-card__input:focus {
+  border-color: hsl(var(--background) / 0.6);
+  box-shadow: 0 0 0 2px hsl(var(--background) / 0.15);
+}
+
+.services-modal__contact .modal-card__input--error {
+  border-color: hsl(var(--destructive));
+}
+
+.services-modal__contact .btn--primary {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--background));
+}
+
+.services-modal__contact .btn--ghost {
+  color: hsl(var(--background));
 }
 
 .services-modal__textarea {
