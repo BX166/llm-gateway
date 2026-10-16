@@ -1524,6 +1524,7 @@
         "header__pro-badge",
         "header__right",
         "header__separator",
+        "header__services-btn",
         "header__star-separator"
       ],
       "files": [
@@ -3379,6 +3380,19 @@
         "theme.css"
       ]
     },
+    "services-modal": {
+      "classes": [
+        "services-modal",
+        "services-modal__contact",
+        "services-modal__list",
+        "services-modal__offer",
+        "services-modal__sent",
+        "services-modal__textarea"
+      ],
+      "files": [
+        "modals.css"
+      ]
+    },
     "settings-card": {
       "classes": [
         "settings-card",
@@ -5073,8 +5087,8 @@
   "stats": {
     "tokens": 79,
     "darkOverrides": 38,
-    "blocks": 313,
-    "classes": 1690,
+    "blocks": 314,
+    "classes": 1697,
     "canonicalRules": 46,
     "ghostRules": 46
   }
