@@ -99,6 +99,9 @@ export default function ServicesContactModal(props: ServicesContactModalProps): 
             <ul class="services-modal__list">
               <For each={[...SERVICES_OFFER]}>{(item) => <li>{item}</li>}</For>
             </ul>
+            <p class="services-modal__more">
+              We also develop anything else your project needs. Tell us about it.
+            </p>
           </div>
           <div class="services-modal__contact">
             <Show

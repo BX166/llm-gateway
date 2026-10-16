@@ -896,3 +896,11 @@
 .services-modal .btn--primary {
   gap: 6px;
 }
+
+.services-modal__more {
+  margin-top: 14px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  line-height: 1.4;
+}

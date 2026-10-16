@@ -39,6 +39,9 @@ describe('ServicesContactModal', () => {
     expect(container.querySelectorAll('.services-modal__list li').length).toBe(
       SERVICES_OFFER.length,
     );
+    expect(container.querySelector('.services-modal__more')!.textContent).toContain(
+      'anything else your project needs',
+    );
     expect((container.querySelector('#services-name') as HTMLInputElement).value).toBe(
       'Ada Lovelace',
     );
@@ -70,7 +73,9 @@ describe('ServicesContactModal', () => {
       company: 'Acme',
       message: 'We need custom guardrails.',
     });
-    expect((await findByRole('status')).textContent).toContain('The Manifest team will reply by email.');
+    expect((await findByRole('status')).textContent).toContain(
+      'The Manifest team will reply by email.',
+    );
   });
 
   it('shows the email address when sending fails', async () => {
