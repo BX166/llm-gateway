@@ -934,3 +934,13 @@
 .services-modal .btn--primary {
   gap: 6px;
 }
+
+.services-modal__contact .btn--primary:hover:not(:disabled) {
+  background: hsl(var(--background) / 0.85);
+  color: hsl(var(--foreground));
+}
+
+.services-modal__contact .btn--ghost:hover {
+  background: hsl(var(--background) / 0.12);
+  color: hsl(var(--background));
+}
