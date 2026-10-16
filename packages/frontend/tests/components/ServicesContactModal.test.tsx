@@ -6,10 +6,7 @@ vi.mock('../../src/services/api/services-contact.js', () => ({
   sendServicesContact: (...args: unknown[]) => sendServicesContact(...args),
 }));
 
-import ServicesContactModal, {
-  SERVICES_CONTACT_EMAIL,
-  SERVICES_OFFER,
-} from '../../src/components/ServicesContactModal';
+import ServicesContactModal, { SERVICES_OFFER } from '../../src/components/ServicesContactModal';
 
 const renderOpen = (onClose = vi.fn()) =>
   render(() => (
@@ -81,7 +78,7 @@ describe('ServicesContactModal', () => {
     const { container, getByText, findByRole } = renderOpen();
     typeMessage(container, 'Hello');
     fireEvent.click(getByText('Send'));
-    expect((await findByRole('alert')).textContent).toContain(SERVICES_CONTACT_EMAIL);
+    expect((await findByRole('alert')).textContent).toContain('Please try again in a moment.');
   });
 
   it('closes on Cancel', () => {

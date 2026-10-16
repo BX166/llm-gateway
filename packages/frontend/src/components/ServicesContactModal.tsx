@@ -1,8 +1,6 @@
 import { createSignal, For, Show, type JSX } from 'solid-js';
 import { sendServicesContact } from '../services/api/services-contact.js';
 
-export const SERVICES_CONTACT_EMAIL = 'sebastien@manifest.build';
-
 export const SERVICES_OFFER = [
   'Guardrails written for your own rules',
   'Custom hooks before and after each request',
@@ -175,7 +173,7 @@ export default function ServicesContactModal(props: ServicesContactModalProps): 
                 </Show>
                 <Show when={failed()}>
                   <p class="modal-card__field-error" role="alert">
-                    The message was not sent. Email us at {SERVICES_CONTACT_EMAIL}.
+                    The message was not sent. Please try again in a moment.
                   </p>
                 </Show>
                 <div class="modal-card__footer">
