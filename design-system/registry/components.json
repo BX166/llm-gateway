@@ -4100,6 +4100,7 @@
         "upgrade-plan-card__footer",
         "upgrade-plan-card__header",
         "upgrade-plan-card__no-commitment",
+        "upgrade-plan-card__notice",
         "upgrade-plan-card__period",
         "upgrade-plan-card__price",
         "upgrade-plan-card__usage"
@@ -5116,7 +5117,7 @@
     "tokens": 79,
     "darkOverrides": 38,
     "blocks": 317,
-    "classes": 1704,
+    "classes": 1705,
     "canonicalRules": 46,
     "ghostRules": 46
   }

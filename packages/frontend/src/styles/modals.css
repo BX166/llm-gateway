@@ -681,7 +681,8 @@
 .plan-banners {
   display: flex;
   flex-wrap: wrap;
-  margin: calc(-1 * var(--gap-xl)) calc(-1 * var(--gap-xl)) var(--gap-lg);
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-lg);
 }
 
 .plan-banners:empty {
@@ -695,11 +696,12 @@
 .free-plan-ends-banner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: var(--gap-md);
-  padding: var(--gap-sm) var(--gap-lg);
+  padding: var(--gap-md) var(--gap-lg);
   background: hsl(var(--primary) / 0.06);
-  border-bottom: 1px solid hsl(var(--primary) / 0.2);
+  border: 1px solid hsl(var(--primary) / 0.2);
+  border-radius: var(--radius);
   font-size: var(--font-size-xs);
   color: hsl(var(--foreground));
 }
@@ -732,11 +734,12 @@
 .usage-limit-banner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: var(--gap-md);
-  padding: var(--gap-sm) var(--gap-lg);
+  padding: var(--gap-md) var(--gap-lg);
   background: hsl(var(--destructive) / 0.06);
-  border-bottom: 1px solid hsl(var(--destructive) / 0.2);
+  border: 1px solid hsl(var(--destructive) / 0.2);
+  border-radius: var(--radius);
   font-size: var(--font-size-xs);
   color: hsl(var(--destructive));
 }

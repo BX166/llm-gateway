@@ -96,7 +96,7 @@
 --z-toast: 8000
 --z-tooltip: 9999
 
-## Blocks (317 BEM blocks, 1704 classes)
+## Blocks (317 BEM blocks, 1705 classes)
 account-back-btn (agents.css): account-back-btn
 account-email-footer (agents.css): account-email-footer
 account-email-toggle (agents.css): account-email-toggle--disabled
@@ -401,7 +401,7 @@ u-wrap (cards.css, charts.css, theme.css): u-wrap
 upgrade-back (agents.css): upgrade-back
 upgrade-limit-notice (agents.css): upgrade-limit-notice
 upgrade-page-header (agents.css): upgrade-page-header upgrade-page-header--centered upgrade-page-header__copy
-upgrade-plan-card (agents.css): upgrade-plan-card upgrade-plan-card--pro upgrade-plan-card__amount upgrade-plan-card__amount--custom upgrade-plan-card__badge upgrade-plan-card__body upgrade-plan-card__cta upgrade-plan-card__desc upgrade-plan-card__divider upgrade-plan-card__features upgrade-plan-card__features-intro upgrade-plan-card__footer upgrade-plan-card__header upgrade-plan-card__no-commitment upgrade-plan-card__period upgrade-plan-card__price upgrade-plan-card__usage
+upgrade-plan-card (agents.css): upgrade-plan-card upgrade-plan-card--pro upgrade-plan-card__amount upgrade-plan-card__amount--custom upgrade-plan-card__badge upgrade-plan-card__body upgrade-plan-card__cta upgrade-plan-card__desc upgrade-plan-card__divider upgrade-plan-card__features upgrade-plan-card__features-intro upgrade-plan-card__footer upgrade-plan-card__header upgrade-plan-card__no-commitment upgrade-plan-card__notice upgrade-plan-card__period upgrade-plan-card__price upgrade-plan-card__usage
 upgrade-plan-grid (agents.css): upgrade-plan-grid
 upgrade-pro-current (agents.css): upgrade-pro-current upgrade-pro-current__card upgrade-pro-current__status
 upgrade-success-modal (modals.css): upgrade-success-modal upgrade-success-modal__body upgrade-success-modal__done upgrade-success-modal__features upgrade-success-modal__icon upgrade-success-modal__subtitle upgrade-success-modal__title
