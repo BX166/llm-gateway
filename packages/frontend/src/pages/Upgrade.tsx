@@ -149,8 +149,10 @@ const Upgrade: Component = () => {
                       <span class="upgrade-plan-card__amount">$0</span>
                       <span class="upgrade-plan-card__period">/month</span>
                     </div>
-                    <p class="upgrade-plan-card__desc">For prototypes and small projects.</p>
-                    <p class="upgrade-plan-card__notice">{FREE_PLAN_ENDS_NOTE}</p>
+                    <p class="upgrade-plan-card__desc">
+                      For prototypes and small projects.
+                      <span class="upgrade-plan-card__notice">{FREE_PLAN_ENDS_NOTE}</span>
+                    </p>
                     <div class="upgrade-plan-card__cta">
                       <button
                         class="btn btn--outline"

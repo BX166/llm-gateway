@@ -541,7 +541,8 @@
 }
 
 .upgrade-plan-card__notice {
-  margin: var(--gap-sm) 0 0;
+  display: block;
+  margin-top: var(--gap-sm);
   color: hsl(var(--primary));
   font-size: var(--font-size-xs);
   font-weight: 500;
