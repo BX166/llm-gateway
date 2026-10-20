@@ -44,15 +44,27 @@ const UsageLimitBanner: Component = () => {
 
   createEffect(() => setDismissed(isDismissedToday(dismissKey())));
 
+  const onFreePlan = () => {
+    const b = billing();
+    return Boolean(b?.enabled && b.plan === 'free' && b.requests.limit != null);
+  };
   const ratio = () => {
     const b = billing();
-    if (!b?.enabled || b.plan !== 'free' || b.requests.limit == null) return 0;
-    return (b.requests.used ?? 0) / b.requests.limit;
+    if (!onFreePlan()) return 0;
+    return (b!.requests.used ?? 0) / b!.requests.limit!;
   };
 
   const atLimit = () => ratio() >= 1;
   const nearLimit = () => ratio() >= 0.8 && ratio() < 1;
-  const canDismiss = () => nearLimit() && !atLimit();
+  const canDismiss = () => !atLimit();
+  const fmt = (n: number) => n.toLocaleString('en-US');
+  const text = () => {
+    const r = billing()!.requests;
+    if (atLimit()) return "You've reached your monthly limit. Requests are being blocked.";
+    if (nearLimit())
+      return `You're limited to ${fmt(r.limit!)} requests this month. Upgrade for unlimited.`;
+    return `Free plan: ${fmt(r.used ?? 0)} of ${fmt(r.limit!)} requests used this month. Upgrade for unlimited.`;
+  };
 
   const handleDismiss = () => {
     dismissForToday(dismissKey());
@@ -60,13 +72,15 @@ const UsageLimitBanner: Component = () => {
   };
 
   return (
-    <Show when={(nearLimit() && !dismissed()) || atLimit()}>
-      <div class="usage-limit-banner" classList={{ 'usage-limit-banner--danger': atLimit() }}>
-        <span class="usage-limit-banner__text">
-          {atLimit()
-            ? "You've reached your monthly limit. Requests are being blocked."
-            : `You're limited to ${billing()!.requests.limit!.toLocaleString('en-US')} requests this month. Upgrade for unlimited.`}
-        </span>
+    <Show when={onFreePlan() && (!dismissed() || atLimit())}>
+      <div
+        class="usage-limit-banner"
+        classList={{
+          'usage-limit-banner--danger': atLimit(),
+          'usage-limit-banner--warning': nearLimit(),
+        }}
+      >
+        <span class="usage-limit-banner__text">{text()}</span>
         <div class="usage-limit-banner__actions">
           <A
             href="/upgrade?reason=requests"

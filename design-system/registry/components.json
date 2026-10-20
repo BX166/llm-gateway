@@ -4152,6 +4152,8 @@
     "usage-limit-banner": {
       "classes": [
         "usage-limit-banner",
+        "usage-limit-banner--danger",
+        "usage-limit-banner--warning",
         "usage-limit-banner__actions",
         "usage-limit-banner__btn",
         "usage-limit-banner__text"
@@ -4362,6 +4364,13 @@
       "value": "calc((18px - 14px) / 2)",
       "file": "custom-select.css",
       "line": 142
+    },
+    {
+      "selector": ".usage-limit-banner--danger",
+      "prop": "background",
+      "value": "hsl(var(--destructive) / 0.12)",
+      "file": "modals.css",
+      "line": 761
     },
     {
       "selector": ".setup-modal__header",
@@ -4963,6 +4972,14 @@
       "losesTo": "overview.css:55"
     },
     {
+      "selector": ".usage-limit-banner--danger",
+      "prop": "background",
+      "value": "hsl(var(--destructive) / 0.06)",
+      "file": "modals.css",
+      "line": 755,
+      "losesTo": "modals.css:761"
+    },
+    {
       "selector": ".request-tool",
       "prop": "border",
       "value": "1px solid hsl(var(--border))",
@@ -5117,8 +5134,8 @@
     "tokens": 79,
     "darkOverrides": 38,
     "blocks": 317,
-    "classes": 1705,
-    "canonicalRules": 46,
-    "ghostRules": 46
+    "classes": 1707,
+    "canonicalRules": 47,
+    "ghostRules": 47
   }
 }

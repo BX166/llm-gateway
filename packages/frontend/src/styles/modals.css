@@ -699,15 +699,21 @@
   justify-content: space-between;
   gap: var(--gap-md);
   padding: var(--gap-md) var(--gap-lg);
-  background: hsl(var(--primary) / 0.06);
-  border: 1px solid hsl(var(--primary) / 0.2);
+  background: hsl(var(--primary) / 0.1);
+  border: 1px solid hsl(var(--primary) / 0.4);
   border-radius: var(--radius);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   color: hsl(var(--foreground));
 }
 
 .free-plan-ends-banner__text {
   font-weight: 500;
+  line-height: 1.5;
+}
+
+.free-plan-ends-banner__text strong {
+  font-weight: 700;
+  color: hsl(var(--primary));
 }
 
 .free-plan-ends-banner__link {
@@ -737,11 +743,22 @@
   justify-content: space-between;
   gap: var(--gap-md);
   padding: var(--gap-md) var(--gap-lg);
-  background: hsl(var(--destructive) / 0.06);
-  border: 1px solid hsl(var(--destructive) / 0.2);
+  background: hsl(var(--muted) / 0.5);
+  border: 1px solid hsl(var(--border));
   border-radius: var(--radius);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
+  color: hsl(var(--foreground));
+}
+
+.usage-limit-banner--warning,
+.usage-limit-banner--danger {
+  background: hsl(var(--destructive) / 0.06);
+  border-color: hsl(var(--destructive) / 0.3);
   color: hsl(var(--destructive));
+}
+
+.usage-limit-banner--danger {
+  background: hsl(var(--destructive) / 0.12);
 }
 
 .usage-limit-banner__text {

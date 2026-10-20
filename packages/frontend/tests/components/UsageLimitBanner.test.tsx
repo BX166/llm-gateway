@@ -42,6 +42,7 @@ describe('UsageLimitBanner', () => {
     const { container } = render(() => <UsageLimitBanner />);
 
     await screen.findByText("You're limited to 10,000 requests this month. Upgrade for unlimited.");
+    expect(container.querySelector('.usage-limit-banner--warning')).not.toBeNull();
     expect(container.querySelector('.usage-limit-banner--danger')).toBeNull();
     expect(container.querySelector('a[href="/upgrade?reason=requests"]')).not.toBeNull();
 
@@ -50,6 +51,31 @@ describe('UsageLimitBanner', () => {
     await waitFor(() => {
       expect(container.querySelector('.usage-limit-banner')).toBeNull();
     });
+  });
+
+  it('shows a neutral usage card to free users under 80% of the limit', async () => {
+    mockGetBillingStatus.mockResolvedValue(freeStatus(664));
+    const { container } = render(() => <UsageLimitBanner />);
+
+    await screen.findByText(
+      'Free plan: 664 of 10,000 requests used this month. Upgrade for unlimited.',
+    );
+    expect(container.querySelector('.usage-limit-banner--warning')).toBeNull();
+    expect(container.querySelector('.usage-limit-banner--danger')).toBeNull();
+    expect(screen.getByText('Got it')).toBeDefined();
+  });
+
+  it('counts a missing used figure as zero', async () => {
+    mockGetBillingStatus.mockResolvedValue({
+      enabled: true,
+      plan: 'free',
+      requests: { used: null, limit: 10_000, periodEnd: null },
+    });
+    render(() => <UsageLimitBanner />);
+
+    await screen.findByText(
+      'Free plan: 0 of 10,000 requests used this month. Upgrade for unlimited.',
+    );
   });
 
   it('keeps the reached-limit warning visible and non-dismissible', async () => {
