@@ -1471,6 +1471,18 @@
         "data.css"
       ]
     },
+    "free-plan-ends-banner": {
+      "classes": [
+        "free-plan-ends-banner",
+        "free-plan-ends-banner__actions",
+        "free-plan-ends-banner__btn",
+        "free-plan-ends-banner__link",
+        "free-plan-ends-banner__text"
+      ],
+      "files": [
+        "modals.css"
+      ]
+    },
     "free-tag": {
       "classes": [
         "free-tag"
@@ -2481,6 +2493,14 @@
         "wizard.css"
       ]
     },
+    "plan-banners": {
+      "classes": [
+        "plan-banners"
+      ],
+      "files": [
+        "modals.css"
+      ]
+    },
     "plan-picker": {
       "classes": [
         "plan-picker",
@@ -2493,6 +2513,7 @@
         "plan-picker__details",
         "plan-picker__features",
         "plan-picker__name",
+        "plan-picker__notice",
         "plan-picker__period",
         "plan-picker__price-inline",
         "plan-picker__radio",
@@ -4079,6 +4100,7 @@
         "upgrade-plan-card__footer",
         "upgrade-plan-card__header",
         "upgrade-plan-card__no-commitment",
+        "upgrade-plan-card__notice",
         "upgrade-plan-card__period",
         "upgrade-plan-card__price",
         "upgrade-plan-card__usage"
@@ -5094,8 +5116,8 @@
   "stats": {
     "tokens": 79,
     "darkOverrides": 38,
-    "blocks": 315,
-    "classes": 1697,
+    "blocks": 317,
+    "classes": 1705,
     "canonicalRules": 46,
     "ghostRules": 46
   }
